@@ -5,7 +5,7 @@ const ObjectId = Schema.Types.ObjectId
 const Star = new Schema(
   {
     name: { type: String, required: true},
-    galaxy: { type: ObjectId, ref: "Galaxy"}
+    galaxy: { type: ObjectId, ref: "Galaxies"}
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
