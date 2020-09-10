@@ -39,6 +39,7 @@ export class PlanetsController extends BaseController {
   async edit(req, res, next) {
     try {
       req.body.id = req.params.id
+     //If we don't ensure the id we're editing is the same and isn't being changed, if we didn't do the above step the user could edit it.
       let data = await planetsService.edit(req.body);
       res.send(data)
     } catch (error) {
